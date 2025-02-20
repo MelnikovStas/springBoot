@@ -1,7 +1,7 @@
-package SpringMVCApp.service;
+package spring_mvc_boot.springBoot.SpringMVCApp.service;
 
-import SpringMVCApp.dao.UserDao;
-import SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.dao.UserDao;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

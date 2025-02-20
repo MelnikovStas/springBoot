@@ -1,12 +1,10 @@
-package SpringMVCApp.dao;
+package spring_mvc_boot.springBoot.SpringMVCApp.dao;
 
-import SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import java.util.List;

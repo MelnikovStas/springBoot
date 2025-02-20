@@ -1,10 +1,10 @@
-package SpringMVCApp.models;
+package spring_mvc_boot.springBoot.SpringMVCApp.models;
 
 
 import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name="Users")
 public class User {
 
     @Id

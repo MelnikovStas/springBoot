@@ -1,6 +1,6 @@
-package SpringMVCApp.dao;
+package spring_mvc_boot.springBoot.SpringMVCApp.dao;
 
-import SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 
 import java.util.List;
 

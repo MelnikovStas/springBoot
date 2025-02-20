@@ -1,6 +1,6 @@
-package SpringMVCApp.service;
+package spring_mvc_boot.springBoot.SpringMVCApp.service;
 
-import SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 
 import java.util.List;
 

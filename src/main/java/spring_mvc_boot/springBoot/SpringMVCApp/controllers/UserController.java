@@ -1,7 +1,7 @@
-package SpringMVCApp.controllers;
+package spring_mvc_boot.springBoot.SpringMVCApp.controllers;
 
-import SpringMVCApp.models.User;
-import SpringMVCApp.service.UserService;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,22 +21,22 @@ public class UserController {
     @GetMapping()
     public String index(Model model) {
         model.addAttribute("users", userService.findAll());
-        return "users/index";
+        return "index";
     }
 
     @GetMapping("/user")//страница со всеми юзерами
     public String user(@RequestParam("id") int userId, Model model) {
         User user = userService.findById(userId);
         model.addAttribute("user", user);
-        return "users/show";
+        return "show";
     }
 
     @GetMapping("/new")
     public String newUser(@ModelAttribute("user") User user) {
-        return "users/new";
+        return "new";
     }
 
-    @PostMapping()
+    @PostMapping("/new")
     public String create(@ModelAttribute("user") User user,
                          BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -50,14 +50,14 @@ public class UserController {
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
         model.addAttribute("user", userService.findById(id));
-        return "users/edit";
+        return "edit";
     }
 
     @PostMapping("/edit")
     public String update(@ModelAttribute("user") User user,
                          BindingResult bindingResult, @RequestParam("id") int id) {
         if (bindingResult.hasErrors()) {
-            return "users/edit";
+            return "edit";
         }
 
         userService.update(user,id);
