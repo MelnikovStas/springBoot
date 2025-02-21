@@ -1,11 +1,11 @@
 package spring_mvc_boot.springBoot.SpringMVCApp.controllers;
 
-import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
-import spring_mvc_boot.springBoot.SpringMVCApp.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
+import spring_mvc_boot.springBoot.SpringMVCApp.service.UserService;
 
 @Controller
 @RequestMapping("/users")
@@ -60,7 +60,7 @@ public class UserController {
             return "edit";
         }
 
-        userService.update(user,id);
+        userService.update(user, id);
         return "redirect:/users";
     }
 
@@ -68,7 +68,7 @@ public class UserController {
     public String delete(@RequestParam("id") int id, Model model) {
         User user = userService.findById(id);
         model.addAttribute("user", user);
-        userService.delete(user,id);
+        userService.delete(user, id);
         return "redirect:/users";
     }
 

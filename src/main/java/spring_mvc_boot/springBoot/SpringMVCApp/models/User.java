@@ -4,20 +4,20 @@ package spring_mvc_boot.springBoot.SpringMVCApp.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Users")
+@Table(name = "Users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
+
     private String name;
 
-    @Column
+
     private int age;
 
-    @Column
+
     private String email;
 
     public User() {

@@ -1,21 +1,20 @@
 package spring_mvc_boot.springBoot.SpringMVCApp.service;
 
-import spring_mvc_boot.springBoot.SpringMVCApp.dao.UserDao;
-import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import spring_mvc_boot.springBoot.SpringMVCApp.dao.UserDao;
+import spring_mvc_boot.springBoot.SpringMVCApp.models.User;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserDao userDao ;
+    private final UserDao userDao;
 
     @Autowired
-    public UserServiceImpl( UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
 
@@ -27,14 +26,15 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public void update(User user,int id) {
+    public void update(User user, int id) {
 
         userDao.update(id, user);
 
     }
+
     @Transactional
     @Override
-    public void delete(User user,int id) {
+    public void delete(User user, int id) {
         userDao.delete(id);
     }
 
